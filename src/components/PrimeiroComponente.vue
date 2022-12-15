@@ -22,15 +22,22 @@ export default {
     created(){
         setTimeout(()=>{
             this.nome='ola'
-        }, 3000)      
-        
+        }, 10000)      
+        this.ciclodevida()        
     },
 
     //Executa depois do create()
-    mount(){
+    mounted(){
         setTimeout(()=>{
         this.nome = 'Alberto'
-        }, 5000)
+        }, 15000)
+        this.ciclodevida()
+    },
+
+    methods:{
+        ciclodevida(){
+            console.log("EXECUTOU");
+        }        
     }
 }
 </script>

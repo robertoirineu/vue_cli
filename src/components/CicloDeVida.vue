@@ -12,6 +12,20 @@ export default{
         return{
             nome:'ola'
         }
+    },
+
+    create(){
+        this.ciclodevida();
+    },
+
+    mouted(){
+        this.ciclodevida();
+    },
+
+    methods:{
+        ciclodevida(){
+            console.log("EXECUTOU");
+        }        
     }
 }
 </script>
