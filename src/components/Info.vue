@@ -4,6 +4,16 @@
         <p v-else > Não sou uma boa pessoa</p>
         <p v-show="mostrar_email">{{email}}</p>
 
+        <ul>
+            <li v-for="(pessoa, index) in mexicanos" v-bind:key="index">{{pessoa}}</li>
+        </ul>
+        <ul>
+            <li v-for="profissao in profissoes" v-bind:key="profissao.id">
+                {{profissao.id}} - {{profissao.descricao}}
+            </li>
+        </ul>
+        <p>Utilizo as seguintes tecnologias</p>
+        
         <div>
             <button @click="showEmail">{{texto_botao}}</button>
         </div>
@@ -28,7 +38,12 @@ export default {
                 mostrar_email: false, 
                 email:'roberto@gmail.com', 
                 meu_link:'https://goolge.com',
-                texto_botao:"Mostar email"}
+                texto_botao:"Mostar email",
+                mexicanos:['MIGUEL','CARMEN','RAMON', 'LEON', 'MARCELA', 'DOLORES'],
+                profissoes:[{id:1, descricao:"Tosador", funcao:"Cortar pelo de animais"},
+                            {id:2, descricao:"Caixa", funcao:"Receber e valores consumido pelo cliente"},
+                            {id:3, descricao:"Veterinario", funcao:"Tratar saúde do animal"}]
+            }
     },
     methods:{
         showEmail(){
