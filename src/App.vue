@@ -1,6 +1,6 @@
 <template>
 
-  <Header/>
+  <Header :estaLogado="false"/>
   <p class="stilo_pai">O dado do app é {{dado}} </p>
   <PrimeiroComponente />
   <CicloDeVida />

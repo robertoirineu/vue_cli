@@ -1,5 +1,7 @@
 <template>
-    <div>
+    <div> 
+        <p>{{outraProp}}</p>
+        <p>{{outraProp}} - {{propEmail}}</p>
         <p v-if="esta_trabalhando" > Ola  sou uma boa pessoa</p>
         <p v-else > Não sou uma boa pessoa</p>
         <p v-show="mostrar_email">{{email}}</p>
@@ -13,7 +15,7 @@
             </li>
         </ul>
         <p>Utilizo as seguintes tecnologias</p>
-        
+         
         <div>
             <button @click="showEmail">{{texto_botao}}</button>
         </div>
@@ -32,6 +34,10 @@ export default {
     name:'Info',
     components:{
         Imagem
+    },
+    props:{
+        outraProp: String,
+        propEmail: String
     },
     data() {
         return {esta_trabalhando: false, 

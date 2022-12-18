@@ -1,6 +1,6 @@
 <template>
 <h2>Essa é a descrição da pessoa: {{nome}}</h2>
-<Info />
+<Info :outraProp="prop" propEmail="roberto@email.com" />
 </template>
 
 <script>
@@ -12,7 +12,8 @@
         },        
         data(){
             return{
-                nome:'Taniel'
+                nome:'Taniel',
+                prop:'propriedade'
             }
         }        
     } 
